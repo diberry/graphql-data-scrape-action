@@ -30,4 +30,4 @@ outputs:
     description: 'GraphQL data returned as JSON object'
 runs:
   using: 'node16'
-  main: 'index.js'
+  main: 'dist/index.js'
