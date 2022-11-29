@@ -1,0 +1,26 @@
+{
+  "name": "graphql-data-scrape-action",
+  "version": "1.0.0",
+  "description": "This action runs a GraphQL query and returns the data as JSON.",
+  "main": "index.js",
+  "dependencies": {
+    "@actions/core": "^1.10.0",
+    "@actions/github": "^5.1.1",
+    "axios": "^1.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diberry/graphql-data-scrape-action.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/diberry/graphql-data-scrape-action/issues"
+  },
+  "homepage": "https://github.com/diberry/graphql-data-scrape-action#readme"
+}
