@@ -1,6 +1,6 @@
 {
   "name": "graphql-data-scrape-action",
-  "version": "1.0.0",
+  "version": "1.4.0",
   "description": "This action runs a GraphQL query and returns the data as JSON.",
   "main": "index.js",
   "dependencies": {
