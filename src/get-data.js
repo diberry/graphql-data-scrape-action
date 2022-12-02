@@ -53,7 +53,7 @@ async function getGraphQLCursor(
   personal_access_token_required=false,
   url = "https://api.github.com/graphql",
   query = QUERY_ORG_REPOS_AGGREGATE,
-  variables = QUERY_ORG_REPOS_AGGREGATE_VARIABLES,
+  queryVariables = QUERY_ORG_REPOS_AGGREGATE_VARIABLES,
   orgName = "Azure-Samples"
 ) {
   if (!personal_access_token && personal_access_token_required)
@@ -67,7 +67,7 @@ async function getGraphQLCursor(
   // Prepare graphQL query for axios
   var data = JSON.stringify({
     query,
-    variables,
+    queryVariables,
   });
 
   // Prepare HTTP request
@@ -85,7 +85,7 @@ async function getGraphQLCursor(
   return response;
 }
 
-async function loopThruCursors() {
+export async function loopThruCursors() {
   let hasNextPage = true;
   let data = [];
   VARIABLES.after = null;
@@ -129,10 +129,10 @@ async function loopThruCursors() {
   return data;
 }
 
-loopThruCursors()
-  .then(function (repositories) {
-    console.log(repositories);
-  })
-  .catch(function (error) {
-    console.log(error);
-  });
+// loopThruCursors()
+//   .then(function (repositories) {
+//     console.log(repositories);
+//   })
+//   .catch(function (error) {
+//     console.log(error);
+//   });
