@@ -1,6 +1,6 @@
 {
   "name": "graphql-data-scrape-action",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "This action runs a GraphQL query and returns the data as JSON.",
   "main": "index.js",
   "dependencies": {
@@ -11,7 +11,9 @@
   "devDependencies": {},
   "scripts": {
     "compile": "ncc build index.js --license licenses.txt",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prestart": "npm run compile",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
